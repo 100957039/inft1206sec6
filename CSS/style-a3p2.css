@@ -1,4 +1,15 @@
 html {
     font-family: sans-serif;
   }
-  
+
+div {
+    width: 200px;
+    height: 200px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+
+    color: white;
+    background-color: red;
+}
