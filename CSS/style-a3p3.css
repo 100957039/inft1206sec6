@@ -50,7 +50,6 @@
          url('../fonts/alice-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -59,13 +58,32 @@
          url('../fonts/clearsans-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
-h1, h2, h3 {
+html {
+    font-size: 10px;
+}
+
+h1 {
     font-family: "alice";
+    font-size: 3em;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+h2 {
+    font-family: "alice";
+    font-size: 2em;
+    letter-spacing: 2px;
 }
 
 body {
     font-family: "clear_sans";
+    line-height: 2;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+section {
+  text-indent: 20px;
 }
