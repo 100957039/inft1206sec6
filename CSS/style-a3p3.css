@@ -79,7 +79,7 @@ h2 {
 
 body {
     font-family: "clear_sans";
-    line-height: 2;
+    line-height: 1.5;
     letter-spacing: 1px;
     word-spacing: 1px;
 }
@@ -127,3 +127,17 @@ a[href^="http"]::after {
   background-image: url("../images/external-link-52.png");
 }
 
+ul, ol, li {
+  font-size: 1em;
+  line-height: 1.5;
+  list-style-type: square;
+}
+
+nav ul li{
+  font-family: "alice";
+  font-size: 2em;
+  border: 3px solid #a66;
+  text-align: center;
+  padding: 15px;
+  margin: 20px;
+}
