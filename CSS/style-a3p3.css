@@ -43,3 +43,29 @@
   }
   
   /* WRITE YOUR CODE BELOW HERE */
+
+  @font-face {
+    font-family: 'alice';
+    src: url('../fonts/alice-regular-webfont.woff2') format('woff2'),
+         url('../fonts/alice-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'clear_sans';
+    src: url('../fonts/clearsans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/clearsans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1, h2, h3 {
+    font-family: "alice";
+}
+
+body {
+    font-family: "clear_sans";
+}
