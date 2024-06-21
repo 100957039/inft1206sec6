@@ -13,9 +13,5 @@ div {
     font-size: 1.125rem; /* Found the rem value by dividing the desired font size(18px) by the root font size(16px)*/
     color: white;
     text-shadow: 1px 1px 1px black;
-    background-color: blue;
-    border-radius: 10px;
-    border: 1px solid darkblue;
-    background-image: linear-gradient(to right bottom, transparent, rgb(0 0 0 / 0.2) 30%);
-    box-shadow: 2px 2px 5px black, inset 2px 2px 2px rgb(255 255 255 / 0.5), inset -2px -2px 2px rgb(0 0 0 / 0.5);
+    background-color: red;
 }
