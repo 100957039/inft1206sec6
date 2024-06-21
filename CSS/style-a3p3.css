@@ -84,7 +84,7 @@ body {
     word-spacing: 1px;
 }
 
-section {
+h2 + p {
   text-indent: 20px;
 }
 
@@ -98,23 +98,23 @@ a:link {
 }
 
 a:visited {
-  color: rgb(154, 102, 170);
+  color: rgb(174, 135, 135);
   
 }
 
 a:focus {
-  color: rgb(170, 149, 102);
+  color: rgb(234, 110, 110);
   text-decoration: none;
 }
 
 a:hover {
-  color: rgb(170, 149, 102);
+  color: rgb(234, 110, 110);
   text-decoration: none;
 }
 
 a:active {
   color: rgb(255, 255, 255);
-  background-color: rgba(170, 102, 102, 0.474);;
+  background-color: rgba(170, 102, 102, 0.737);
 }
 
 a[href^="http"]::after {
@@ -136,8 +136,31 @@ ul, ol, li {
 nav ul li{
   font-family: "alice";
   font-size: 2em;
+  list-style-type: none;
+  display: flex;
   border: 3px solid #a66;
-  text-align: center;
-  padding: 15px;
+  line-height: 3;
   margin: 20px;
+}
+
+nav a {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  outline-color: transparent;
+  color: #a66;
+}
+
+nav a:link, nav  a:visited, nav a:focus {
+  color: #a66;
+  background-color: white;
+}
+
+nav a:hover {
+  background-color: rgba(170, 102, 102, 0.145);
+}
+
+nav a:active {
+  color: white;
+  background-color: #a66;
 }
