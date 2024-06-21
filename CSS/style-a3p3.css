@@ -87,3 +87,43 @@ body {
 section {
   text-indent: 20px;
 }
+
+a {
+  color: #a66;
+  outline-color: transparent;
+}
+
+a:link {
+  color: #a66;
+}
+
+a:visited {
+  color: rgb(154, 102, 170);
+  
+}
+
+a:focus {
+  color: rgb(170, 149, 102);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(170, 149, 102);
+  text-decoration: none;
+}
+
+a:active {
+  color: rgb(255, 255, 255);
+  background-color: rgba(170, 102, 102, 0.474);;
+}
+
+a[href^="http"]::after {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-left: 0.25em;
+  background-size: 100%;
+  background-image: url("../images/external-link-52.png");
+}
+
