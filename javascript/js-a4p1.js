@@ -20,24 +20,34 @@ let insertZ = ['spontaneously combusted', 'melted into a puddle on the sidewalk'
 randomize.addEventListener('click', result);
 
 function result() {
+  // Creates a varaible for the story for editting
   let newStory = storyText;
+
+  // Picks a random string from each array of strings
   let xItem = randomValueFromArray(insertX);
   let yItem = randomValueFromArray(insertY);
   let zItem = randomValueFromArray(insertZ);
 
+  // Adds all randomly generated strings to the story string
   newStory = newStory.replaceAll(':insertx:', xItem);
   newStory = newStory.replaceAll(':inserty:', yItem);
   newStory = newStory.replaceAll(':insertz:', zItem);
 
   if(customName.value !== '') {
     const name = customName.value;
+
+    // Replaces the default story name with the user inputted name
     newStory.replaceAll('Bob', name);
   }
 
   if(document.getElementById("uk").checked) {
-    const weight = Math.round(300);
-    const temperature =  Math.round(94);
-
+    // Converts US weight and temperature into UK units
+    const weight = Math.round(300 / 14).concat(' stone');
+    const temperature =  Math.round((94 - 32)* 5/9).concat(' centigrade');
+    
+    // Replaces weight and temperature in the story with UK equivalents
+    newStory = newStory.replaceAll('300 pounds', weight);
+    newStory = newStory.replaceAll('94 fahrenheit', temperature);
   }
 
   story.textContent = '';
