@@ -37,19 +37,19 @@ function result() {
     const name = customName.value;
 
     // Replaces the default story name with the user inputted name
-    newStory.replaceAll('Bob', name);
+    newStory = newStory.replaceAll('Bob', name);
   }
 
   if(document.getElementById("uk").checked) {
     // Converts US weight and temperature into UK units
-    const weight = Math.round(300 / 14).concat(' stone');
-    const temperature =  Math.round((94 - 32)* 5/9).concat(' centigrade');
+    const weight = String(Math.round(300 / 14)).concat(' stones');
+    const temperature =  String(Math.round((94 - 32)* 5/9)).concat(' centigrade');
     
     // Replaces weight and temperature in the story with UK equivalents
     newStory = newStory.replaceAll('300 pounds', weight);
     newStory = newStory.replaceAll('94 fahrenheit', temperature);
   }
 
-  story.textContent = '';
+  story.textContent = newStory;
   story.style.visibility = 'visible';
 }
