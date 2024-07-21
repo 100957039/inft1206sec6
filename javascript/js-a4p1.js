@@ -1,3 +1,10 @@
+/*
+	Name: Rachel Boden
+	File: js-a4p1.js
+	Date: 20 July 2024
+	Assignment 4 part 1, creating a silly story generator
+*/
+
 // COMPLETE VARIABLE AND FUNCTION DEFINITIONS
 
 const customName = document.getElementById('customname');
