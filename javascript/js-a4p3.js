@@ -1,6 +1,6 @@
 /*
   Name: Rachel Boden
-	File: a4p3.html
+	File: js-a4p3.js
 	Date: 21 July 2024
 	Assignment 4 part 3, creating a screen of bouncing balls
 */
