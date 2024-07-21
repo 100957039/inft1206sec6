@@ -1,3 +1,10 @@
+/*
+	Name: Rachel Boden
+	File: js-a4p4.js
+	Date: 21 July 2024
+	Assignment 4 part 4, adding features to the bouncing ball script
+*/
+
 // set up canvas
 
 const canvas = document.querySelector("canvas");
