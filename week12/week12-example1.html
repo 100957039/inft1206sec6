@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function validate(){
+            let fname = document.querySelector('#fname').value.trim();
+
+            if(fname.length==0){
+                // alert("You must provide a valid first name")
+                document.querySelector('#fname-error').textContent="You must provide a valid first name";
+                return false;
+            }
+            else if(fname.length<5){
+                document.querySelector('#fname-error').textContent="First name must be at least 5 characters";
+                return false;
+            }
+            else{
+                fname = fname.toLowerCase();
+                for(let i=0;i<fname.length;i++){
+                    if(fname[i]<'a' || fname[i]>'z'){
+                        document.querySelector('#fname-error').textContent="First name cannot include numbers or symbols";
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
+
+    </script>
+    <title>Week 12</title>
+</head>
+<body>
+    <h1>Week 12: Introduction to Forms</h1>
+    <form action="https://httpbin.org/get" method="get" onsubmit="return validate()">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <div>
+                <label for="fname">First Name: </label>
+                <input type="text" id="fname" name="fname" placeholder="First Name" title="Enter First Name" required>
+                <span id="fname-error" style="color: red;"></span>
+            </div>
+    
+            <div>
+                <label for="lname">Last Name: </label>
+                <input type="text" id="lname" name="lname" size="15" placeholder="Last Name">
+            </div>
+        </fieldset>
+        <div>
+            <label for="pass">Password</label>
+            <input type="password" id="pass" name="pass">
+        </div>
+
+        <div>
+            <label for="assignment">Upload your assignment</label>
+            <input type="file" id="assignment" name="assignment">
+        </div>
+
+        <div>
+            <p>What are your hobbies and interests?</p>
+            <input type="checkbox" id="interests1" name="interests" value="sports">
+            <label for="interests1">Sports</label>
+            <input type="checkbox" id="interests2" name="interests" value="music">
+            <label for="interests2">Music</label>
+        </div>
+
+        <div>
+            <p>Which OS do you prefer?</p>
+            <input type="radio" id="os1" name="os" value="windows" checked>
+            <label for="os1">Windows</label>
+            <input type="radio" id="os2" name="os" value="mac">
+            <label for="os2">Mac</label>
+        </div>
+
+        <div>
+            <label for="course">What is your current course?</label>
+            <input type="text" id="course" name="course" list="courselist">
+            <datalist id="courselist">
+                <option value="INFT1206">INFT1206</option>
+                <option value="INFT2100">INFT2100</option>
+            </datalist>
+        </div>
+
+        <div>
+            <label for="weekend">What do you want to do this weekend?</label>
+            <select name="weekend" id="weekend">
+                <option value="coffee">Drink coffee</option>
+                <option value="read">Read a book</option>
+                <option value="walk">Take a walk</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="web">How is the web development going so far?</label>
+            <br>
+            <textarea name="web" id="web" rows="10" cols="30"></textarea>
+        </div>
+
+        <div>
+            <p>What is your favourite number?</p>
+            <input type="number" id="favnum" name="favnum" min"0" max="10" step="2">
+        </div>
+
+        <div>
+            <input type="submit">
+            <input type="reset">
+        </div>
+    </form>
+</body>
+</html>
