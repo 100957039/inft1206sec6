@@ -1,3 +1,10 @@
+/*
+	Name: Rachel Boden
+	File: js-a5p1.js
+  Date: 08 August 2024
+	Assignment 5 part 1, fixing accessibility issues of a website
+*/
+
 // functionality for showing/hiding the comments section
 
 const showHideBtn = document.querySelector('.show-hide');
